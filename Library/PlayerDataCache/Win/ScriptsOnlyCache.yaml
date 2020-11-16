@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - exitScript
     - helpScript
+    - hoverAnimalScript
     - nextSceneScript
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -38,12 +39,16 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
     - Class: 114
-      Script: {instanceID: 14288}
+      Script: {instanceID: 14292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -78,11 +83,11 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 12866}
     - Class: 114
-      Script: {instanceID: 16154}
+      Script: {instanceID: 13890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -110,12 +115,16 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -143,12 +152,16 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -176,12 +189,16 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -209,12 +226,16 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -242,12 +263,16 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -275,12 +300,16 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -308,12 +337,16 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
     - Class: 114
-      Script: {instanceID: 14288}
+      Script: {instanceID: 14292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -341,12 +374,18 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13890}
+    - Class: 114
+      Script: {instanceID: 20336}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -356,6 +395,125 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    Assets/Scenes/SceneARICI.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/SceneBUFNITA.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/SceneCERB.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/SceneMISTRET.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/SceneURS.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/SceneVEVERITA.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/SceneVULPE.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -630,6 +788,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: helpScript
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -864,10 +1028,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 8478f4be4f8f51ee2421932063d6d39c
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: helpScript
+    className: hoverAnimalScript
   platform: 5
   scenePathNames:
   - Assets/Scenes/Scene0.unity
@@ -880,4 +1044,11 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Scene7.unity
   - Assets/Scenes/Scene8.unity
   - Assets/Scenes/Scene9.unity
+  - Assets/Scenes/SceneARICI.unity
+  - Assets/Scenes/SceneBUFNITA.unity
+  - Assets/Scenes/SceneCERB.unity
+  - Assets/Scenes/SceneMISTRET.unity
+  - Assets/Scenes/SceneURS.unity
+  - Assets/Scenes/SceneVEVERITA.unity
+  - Assets/Scenes/SceneVULPE.unity
   playerPath: C:/Users/George/HCI/HCI/Builds/HCI.exe

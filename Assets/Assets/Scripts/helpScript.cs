@@ -9,9 +9,9 @@ public class helpScript : MonoBehaviour
     GameObject pointerFW1;
     GameObject pointerLeftFW;
 
-    public AudioSource sound1;
-    public AudioSource sound2;
-    public AudioSource sound3;
+    private AudioSource sound1;
+    private AudioSource sound2;
+    private AudioSource sound3;
     private bool firstPlaying = false;
     private bool secondPlaying = false;
     private bool thirdPlaying = false;
@@ -40,7 +40,6 @@ public class helpScript : MonoBehaviour
         pointerFW1 = GameObject.Find("pointer.fw (1)");
         pointerLeftFW = GameObject.Find("pointerLeft.fw");
 
-        //sound1 = GetComponent<AudioSource>();
         sound1 = GameObject.Find("pointer.fw").GetComponent<AudioSource>();
         sound2 = GameObject.Find("pointer.fw (1)").GetComponent<AudioSource>();
         sound3 = GameObject.Find("pointerLeft.fw").GetComponent<AudioSource>();
@@ -56,8 +55,6 @@ public class helpScript : MonoBehaviour
         pointerFW.SetActive(false);
         pointerFW1.SetActive(false);
         pointerLeftFW.SetActive(false);
-
-        
     }
 
     // Update is called once per frame
@@ -100,9 +97,7 @@ public class helpScript : MonoBehaviour
             pointerLeftFW.SetActive(false);
         }
 
-
         trackLength -= Time.deltaTime;
         Debug.Log(trackLength);
-
     }
 }
