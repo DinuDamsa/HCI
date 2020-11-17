@@ -55,7 +55,7 @@ public class genereazaGhicitoareScript : MonoBehaviour
 
     private void setupRandomAnimal(GameObject animal)
     {
-       int randIndex = generateRandInt(0, totalAnimals);
+        int randIndex = generateRandInt(0, totalAnimals);
         animal.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(animals[randIndex]);
         float size = animalSizes[randIndex];
         animal.transform.localScale = new Vector3(size, size, size);
