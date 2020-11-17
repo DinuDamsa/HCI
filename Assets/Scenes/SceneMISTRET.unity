@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 518495568}
   - component: {fileID: 518495567}
   m_Layer: 0
-  m_Name: squirrel.fw (1)
+  m_Name: animal2Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 671431143}
   - component: {fileID: 671431142}
   m_Layer: 0
-  m_Name: fox.fw (1)
+  m_Name: animal3Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 877396755}
   - component: {fileID: 877396754}
   m_Layer: 0
-  m_Name: squirrel.fw
+  m_Name: animal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 1777490668}
   - component: {fileID: 1777490667}
   m_Layer: 0
-  m_Name: boar.fw
+  m_Name: animal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 1802836822}
   - component: {fileID: 1802836821}
   m_Layer: 0
-  m_Name: fox.fw
+  m_Name: animal3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -944,7 +944,7 @@ GameObject:
   - component: {fileID: 1943411375}
   - component: {fileID: 1943411374}
   m_Layer: 0
-  m_Name: boar.fw (1)
+  m_Name: animal1Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

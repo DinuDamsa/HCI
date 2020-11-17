@@ -214,8 +214,10 @@ GameObject:
   m_Component:
   - component: {fileID: 250710417}
   - component: {fileID: 250710416}
+  - component: {fileID: 250710419}
+  - component: {fileID: 250710418}
   m_Layer: 0
-  m_Name: speaker.fw (2)
+  m_Name: speaker3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,6 +287,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250710418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250710415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5be0096f794e84b8403751d137ef43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &250710419
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250710415}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.45, y: 7.38}
+    newSize: {x: 9.45, y: 7.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.45, y: 7.38}
+  m_EdgeRadius: 0
 --- !u!1 &500246875
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,8 +456,10 @@ GameObject:
   m_Component:
   - component: {fileID: 527200477}
   - component: {fileID: 527200476}
+  - component: {fileID: 527200479}
+  - component: {fileID: 527200478}
   m_Layer: 0
-  m_Name: speaker.fw (1)
+  m_Name: speaker2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -487,6 +529,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &527200478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527200475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5be0096f794e84b8403751d137ef43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &527200479
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527200475}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.45, y: 7.38}
+    newSize: {x: 9.45, y: 7.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.45, y: 7.38}
+  m_EdgeRadius: 0
 --- !u!1 &923425177
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +578,7 @@ GameObject:
   - component: {fileID: 923425179}
   - component: {fileID: 923425178}
   m_Layer: 0
-  m_Name: boar.fw
+  m_Name: animal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,8 +658,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1507086193}
   - component: {fileID: 1507086192}
+  - component: {fileID: 1507086195}
+  - component: {fileID: 1507086194}
   m_Layer: 0
-  m_Name: speaker.fw
+  m_Name: speaker1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -649,6 +731,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507086194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507086191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5be0096f794e84b8403751d137ef43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1507086195
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507086191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.45, y: 7.38}
+    newSize: {x: 9.45, y: 7.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.45, y: 7.38}
+  m_EdgeRadius: 0
 --- !u!1 &1651483904
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2113267013}
   - component: {fileID: 2113267012}
+  - component: {fileID: 2113267014}
   m_Layer: 0
   m_Name: gameBkg.fw
   m_TagString: Untagged
@@ -852,3 +973,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2113267014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113267011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0415566ed6e7b9d4d81522a8ed2975d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctNumber: 0
