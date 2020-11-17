@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 537946732}
   - component: {fileID: 537946731}
   m_Layer: 0
-  m_Name: fox.fw
+  m_Name: animal3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,6 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204679250}
   - component: {fileID: 1204679249}
+  - component: {fileID: 1204679251}
   m_Layer: 0
   m_Name: gameBkg.fw
   m_TagString: Untagged
@@ -568,6 +569,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1204679251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204679248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa74cc6364f01b442bbd363f42c9aac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctAnimal: 0
 --- !u!1 &1364856307
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +715,7 @@ GameObject:
   - component: {fileID: 1650423590}
   - component: {fileID: 1650423589}
   m_Layer: 0
-  m_Name: deer.fw
+  m_Name: animal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,7 +796,7 @@ GameObject:
   - component: {fileID: 1920886425}
   - component: {fileID: 1920886424}
   m_Layer: 0
-  m_Name: hedgehog.fw
+  m_Name: animal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
