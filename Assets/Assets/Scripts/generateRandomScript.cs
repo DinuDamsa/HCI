@@ -46,12 +46,6 @@ public class generateRandomScript : MonoBehaviour
 
     private void generateRandomAnimals()
     {
-        var renderer = animal1.GetComponent<SpriteRenderer>();
-        Debug.Log(AssetDatabase.GetAssetPath(renderer.sprite));
-        Debug.Log(renderer.sprite);
-        Debug.Log(renderer.sprite.name);
-        
-
         int randint = generateRandInt(0, totalAnimals);
         string animalName = animals[randint];
         float animalSize = animalSizes[randint];

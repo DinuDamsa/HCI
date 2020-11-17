@@ -4,18 +4,47 @@ using UnityEngine;
 
 public class genereazaGhicitoareScript : MonoBehaviour
 {
+    private class Ghicitoare
+    {
+        public Ghicitoare(int correctAnimal, string animalSpritePath, float animalSize, string soundPath)
+        {
+            this.correctAnimal = correctAnimal;
+            this.animalSpritePath = animalSpritePath;
+            this.animalSize = animalSize;
+            this.soundPath = soundPath;
+            this.correctAnimal = correctAnimal;
+        }
+
+        public int correctAnimal;
+        public string animalSpritePath;
+        public float animalSize;
+        public string soundPath;
+    }
+
     private GameObject animal1;
     private GameObject animal2;
     private GameObject animal3;
 
-    private string[] animals = { "bear.fw", "boar.fw", "deer.fw", "fox.fw", "hedgehog.fw", "owl.fw", "squirrel.fw" };
-    private float[] animalSizes = { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f };
-    private int totalAnimals = 7; // TODO: aici trebuie sa avem si o lista de ghicitori (animalele sunt raspunsul ghicitorii)
+    private GameObject speaker;
 
-    public int correctAnimal; // TODO: asta este raspunsul ghicitorii
+    private Ghicitoare[] ghicitori = {
+        new Ghicitoare(0, "bear.fw", 0.2256717f, "wednesday"),
+        new Ghicitoare(1, "boar.fw", 0.5291776f, "wednesday"),
+        new Ghicitoare(2, "deer.fw", 0.7277227f, "wednesday"),
+        new Ghicitoare(3, "fox.fw", 0.2454485f, "wednesday"),
+        new Ghicitoare(4, "hedgehog.fw", 1f, "wednesday"),
+        new Ghicitoare(5, "owl.fw", 0.4649033f, "wednesday"),
+        new Ghicitoare(6, "squirrel.fw", 0.3867876f, "wednesday")
+    };
 
-    private SpriteRenderer spriteRenderer;
-    private string path = "";
+
+    private List<string> animals = new List<string>(new string[] { "bear.fw", "boar.fw", "deer.fw", "fox.fw", "hedgehog.fw", "owl.fw", "squirrel.fw" });
+    private List<float> animalSizes = new List<float>(new float[] { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f });
+    private int totalAnimals = 7;
+
+    private int correctAnswer;
+    private GameObject[] animalsObjects = new GameObject[3];
+
 
     private int generateRandInt(int min, int max)
     {
@@ -24,50 +53,52 @@ public class genereazaGhicitoareScript : MonoBehaviour
     }
 
 
-
-    private void generateGhicitoareSiAnimale()
+    private void setupRandomAnimal(GameObject animal)
     {
-        var renderer = animal1.GetComponent<SpriteRenderer>();
+       int randIndex = generateRandInt(0, totalAnimals);
+        animal.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(animals[randIndex]);
+        float size = animalSizes[randIndex];
+        animal.transform.localScale = new Vector3(size, size, size);
 
-
-        int randint = generateRandInt(0, totalAnimals);
-        string animalName = animals[randint];
-        float animalSize = animalSizes[randint];
-        string pathToNewSprite = path + animalName;
-
-
-        //TODO: trebuie sa alegem ghicitoarea
-        // Ghicitoare ghicitoare = ghicitori[randint];
-        // string numeAnimalRaspunsCorect = ghicitoare.numeAnimalRaspunsCorect;
-        // string spriteAnimalRaspunsCorect = ghicitoare.spriteAnimalRaspunsCorect;
-        // AudioSource ghicitoareAudio = ghicitoare.audio;
-        // ghicitoareAudio.Start();
-
-
-        Debug.Log(pathToNewSprite);
-        Sprite newSprite = Resources.Load<Sprite>(pathToNewSprite); // aici vom genera 2/3 animale random si vom adauga pe cel raspuns al ghicitorii
-        // shuffled = shuffle([animal1, animal2, animal3])
-        // shuffled[0].sprite = spriteAnimalRaspunsCorect
-        // shuffled[0].value = numeAnimalRaspunsCorect
-        // shuffled[1,2].sprite = randomSprite
-        // shuffled[1,2].value = whateverElse
-        
-        
-
-        Debug.Log(newSprite);
-        spriteRenderer = animal1.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = newSprite;
-        spriteRenderer = animal2.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = newSprite;
-        spriteRenderer = animal3.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = newSprite;
-
-        animal1.transform.localScale = new Vector3(animalSize, animalSize, animalSize);
-        animal2.transform.localScale = new Vector3(animalSize, animalSize, animalSize);
-        animal3.transform.localScale = new Vector3(animalSize, animalSize, animalSize);
+        // removed used animals
+        animals.RemoveAt(randIndex);
+        animalSizes.RemoveAt(randIndex);
+        totalAnimals -= 1;
     }
 
 
+    private void generateGhicitoareSiAnimale()
+    {
+        // am ales ghicitoarea
+        int randint = generateRandInt(0, totalAnimals); // total ghicitori = total animale
+        Ghicitoare ghicitoare = ghicitori[randint];
+
+        // alegem obiectul din joc care va fi cel corect
+        int randindex = generateRandInt(0, 3); // 3 animale pe ecran
+
+        // setam animalului din joc detaliile corecte
+        animalsObjects[randindex].GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(ghicitoare.animalSpritePath);
+        float size = ghicitoare.animalSize;
+        animalsObjects[randindex].transform.localScale = new Vector3(size, size, size);
+
+        // setam sunetul pe speaker, pentru a putea fi repetat on demand
+        AudioSource audio = speaker.GetComponent<AudioSource>(); //Assets / Resources / wednesday.mp3
+        audio.clip = Resources.Load<AudioClip>(ghicitoare.soundPath);
+        Debug.Log(ghicitoare.soundPath);
+        audio.Play();
+
+        correctAnswer = ghicitoare.correctAnimal;
+
+        // scoatem din lista de animale animalul corect (INTERZIS duplicate)
+        animals.RemoveAt(correctAnswer);
+        animalSizes.RemoveAt(correctAnswer);
+        totalAnimals -= 1;
+
+        // setam restul animalelor gresite random
+        setupRandomAnimal(animalsObjects[(randindex + 1) % 3]);
+        setupRandomAnimal(animalsObjects[(randindex + 2) % 3]);
+
+    }
 
 
     // Start is called before the first frame update
@@ -76,6 +107,13 @@ public class genereazaGhicitoareScript : MonoBehaviour
         animal1 = GameObject.Find("animal1");
         animal2 = GameObject.Find("animal2");
         animal3 = GameObject.Find("animal3");
+
+        speaker = GameObject.Find("speaker");
+
+        // adaugam in lista de animale toate obiectele din joc pentru a le procesa
+        animalsObjects[0] = animal1;
+        animalsObjects[1] = animal2;
+        animalsObjects[2] = animal3;
 
         generateGhicitoareSiAnimale();
         Debug.Log("DONE");
