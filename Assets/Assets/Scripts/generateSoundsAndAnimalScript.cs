@@ -16,10 +16,14 @@ public class generateSoundsAndAnimalScript : MonoBehaviour
     private List<float> animalSizes = new List<float>(new float[] { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f });
     private int totalAnimals = 7;
 
-    private int correctAnswer;
+    private static int correctNumber;
     private GameObject[] speakerObjects = new GameObject[3];
 
 
+    public static bool checkAnswer(int answer)
+    {
+        return answer == correctNumber;
+    }
 
 
     private int generateRandInt(int min, int max)
@@ -46,7 +50,7 @@ public class generateSoundsAndAnimalScript : MonoBehaviour
     private void generateRandomSound()
     {
         // choose which speaker is the good one
-        int randSpeaker = generateRandInt(0, 3); // 3 speakere
+        int randSpeaker = generateRandInt(0, 3); // 3 speakere (o sa mapam valoarea de la 0-2 la 1-3)
 
         // choose an animal to listen to their sound
         int randindex = generateRandInt(0, 7); // 7 animale
@@ -60,17 +64,20 @@ public class generateSoundsAndAnimalScript : MonoBehaviour
         AudioSource audio = speakerObjects[randSpeaker].GetComponent<AudioSource>(); //Assets / Resources / wednesday.mp3
         audio.clip = Resources.Load<AudioClip>(animalSounds[randindex]);
         
-        correctAnswer = randindex;
+        correctNumber = randindex;
 
         // eliminam animalul corect (interzis duplicate)
-        animals.RemoveAt(correctAnswer);
-        animalSizes.RemoveAt(correctAnswer);
+        animals.RemoveAt(correctNumber);
+        animalSizes.RemoveAt(correctNumber);
         totalAnimals -= 1;
 
         // restul sunetelor animalelor sunt random
         setupRandomAnimalSound(speakerObjects[(randSpeaker + 1) % 3]);
         setupRandomAnimalSound(speakerObjects[(randSpeaker + 2) % 3]);
 
+
+        // LA FINAL, SETAM RASPUNSUL CORECT PENTRU CA ASA TRIMITEM PE CLICK VALORILE DIN INTERFATA (1,2,3)
+        correctNumber = randSpeaker + 1;
     }
 
     // Start is called before the first frame update

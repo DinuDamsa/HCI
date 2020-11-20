@@ -42,8 +42,14 @@ public class genereazaGhicitoareScript : MonoBehaviour
     private List<float> animalSizes = new List<float>(new float[] { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f });
     private int totalAnimals = 7;
 
-    private int correctAnswer;
+    private static int correctNumber;
     private GameObject[] animalsObjects = new GameObject[3];
+
+
+    public static bool checkAnswer(int answer)
+    {
+        return answer == correctNumber;
+    }
 
 
     private int generateRandInt(int min, int max)
@@ -87,17 +93,20 @@ public class genereazaGhicitoareScript : MonoBehaviour
         Debug.Log(ghicitoare.soundPath);
         audio.Play();
 
-        correctAnswer = ghicitoare.correctAnimal;
+        correctNumber = ghicitoare.correctAnimal;
 
         // scoatem din lista de animale animalul corect (INTERZIS duplicate)
-        animals.RemoveAt(correctAnswer);
-        animalSizes.RemoveAt(correctAnswer);
+        animals.RemoveAt(correctNumber);
+        animalSizes.RemoveAt(correctNumber);
         totalAnimals -= 1;
 
         // setam restul animalelor gresite random
         setupRandomAnimal(animalsObjects[(randindex + 1) % 3]);
         setupRandomAnimal(animalsObjects[(randindex + 2) % 3]);
 
+
+        // LA FINAL, (PUTEM FOLOSI DOAR INDEXUL SA IL TRANSMITEM DIN INTERFATA - nu stiu altfel mai simplu) POZITIA ANIMALULUI CORECT ESTE RASPUNSUL.
+        correctNumber = randindex + 1;
     }
 
 

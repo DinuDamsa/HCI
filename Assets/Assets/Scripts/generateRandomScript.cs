@@ -20,10 +20,20 @@ public class generateRandomScript : MonoBehaviour
     private int totalAnimals = 7;
     //private GameplayManager gameplayManager = GameObject.FindObjectOfType<GameplayManager>();
     // https://www.youtube.com/watch?v=ck6OyNBC95c
-    public int correctNumber;
+    public static int correctNumber;
 
     private SpriteRenderer spriteRenderer;
     private string path = "";
+
+
+
+    public static bool checkAnswer(int answer)
+    {
+        return answer == correctNumber;
+    }
+
+
+
 
     private int generateRandInt(int min, int max)
     {
@@ -80,18 +90,9 @@ public class generateRandomScript : MonoBehaviour
         twoFW = GameObject.Find("two.fw");
         threeFW = GameObject.Find("three.fw");
 
-
-        //oneFW.AddComponent(typeof(EventTrigger));
-        //EventTrigger trigger = YourGameObject.GetComponent<EventTrigger>();
-        //EventTrigger.Entry entry = new EventTrigger.Entry();
-        //entry.eventID = EventTriggerType.PointerClick;
-        //entry.callback.AddListener((eventData) => { Debug.Log("listener code");/* Your code here */ });
-        //trigger.triggers.Add(entry);
-
-
-
         handleShowCorrectNumberOfAnimals();
         generateRandomAnimals();
+
         Debug.Log("DONE");
     }
 

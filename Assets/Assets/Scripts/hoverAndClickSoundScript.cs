@@ -5,11 +5,24 @@ using UnityEngine;
 public class hoverAndClickSoundScript : MonoBehaviour
 {
     private AudioSource sound;
+    public int selectedValue;
 
     public void OnMouseUp()
     {
         Debug.Log("MOUSE CLICK");
-        Debug.Log("");
+        Debug.Log(selectedValue);
+
+        if (generateSoundsAndAnimalScript.checkAnswer(selectedValue))
+        {
+            // felicitari
+            Debug.Log("FELICITARI!");
+        }
+        else
+        {
+            // oof
+            Debug.Log("OOF!");
+        }
+
     }
 
     public void OnMouseEnter()

@@ -12,17 +12,25 @@ public class genereazaAnimaleColorateScript : MonoBehaviour
     private float[] animalSizes = { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f };
     private int totalAnimals = 7;
 
-    public int correctNumber; // TODO: asta e animalul corect colorat de pe ecran
+    public static int correctNumber; // TODO: asta e animalul corect colorat de pe ecran
 
     private SpriteRenderer spriteRenderer;
     private string path = "";
+
+
+
+    public static bool checkAnswer(int answer)
+    {
+        return answer == correctNumber;
+    }
+
+
 
     private int generateRandInt(int min, int max)
     {
         System.Random rnd = new System.Random();
         return rnd.Next(min, max);
     }
-
 
 
     private void generateRandomColouredAnimals()

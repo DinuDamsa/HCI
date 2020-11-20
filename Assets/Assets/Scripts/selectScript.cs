@@ -5,14 +5,12 @@ using UnityEngine;
 public class selectScript : MonoBehaviour
 {
     public int selectedValue;
-    public int correctNumber;
 
     public void OnMouseUp()
     {
         Debug.Log(selectedValue);
-        Debug.Log(correctNumber);
         
-        if(selectedValue == correctNumber)
+        if(generateRandomScript.checkAnswer(selectedValue))
         {
             // felicitari
             Debug.Log("FELICITARI!");
