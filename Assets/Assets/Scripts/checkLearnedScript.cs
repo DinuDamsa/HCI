@@ -1,40 +1,59 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class checkLearnedScript : MonoBehaviour
 {
-    GameObject squirrelFW;
-    GameObject meniu;
+    static GameObject completed; // this is supposed to never be destroyed and to be obj.position.x == 0 if not finished and == 1 if yes.
+    GameObject squirrel;
 
-    private bool completed = false;
-
-    public void OnFocusChanged(bool hasFocus)
+    void handleFinishedLearning()
     {
-        checkSkipPossible();
+        Debug.Log("completed");
+        Debug.Log(completed);
+
+        Debug.Log("completed.transform.position.x");
+        Debug.Log(completed.transform.position.x);
+
+        if (completed.transform.position.x == 0)
+        {
+            squirrel.SetActive(false);
+        }
+        else
+        {
+            squirrel.SetActive(true);
+        }
     }
 
-    public void checkSkipPossible()
+    public static void setFinished()
     {
-        squirrelFW.SetActive(completed);
-        squirrelFW.transform.Rotate(50 * Time.deltaTime, 0, 0);
+        Debug.Log("public void setFinished()");
+
+        Debug.Log("completed");
+        Debug.Log(completed);
+
+        Debug.Log("completed.transform.position.x");
+        Debug.Log(completed.transform.position.x);
+
+
+        completed.transform.position = new Vector3(1,8,0);
     }
 
-    public void setCompleted()
-    {
-        this.completed = true;
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        squirrelFW = GameObject.Find("squirrel.fw");
-        meniu = GameObject.Find("meniu");
+        completed = GameObject.Find("completed");
+        squirrel = GameObject.Find("squirrel.fw");
+
+        DontDestroyOnLoad(completed);
+        
+        handleFinishedLearning();
     }
 
     // Update is called once per frame
     void Update()
     {
-        squirrelFW.transform.Rotate(0, 100 * Time.deltaTime, 0);
     }
 }
