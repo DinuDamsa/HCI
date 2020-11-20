@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SceneMISTRET.unity
+- path: Assets/Scenes/SceneARICI.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

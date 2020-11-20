@@ -405,8 +405,8 @@ GameObject:
   m_Component:
   - component: {fileID: 716093647}
   - component: {fileID: 716093646}
-  - component: {fileID: 716093649}
   - component: {fileID: 716093648}
+  - component: {fileID: 716093649}
   m_Layer: 0
   m_Name: owl.fw
   m_TagString: Untagged
