@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class generateAnimalShadowsScript : MonoBehaviour
 {
@@ -11,18 +13,17 @@ public class generateAnimalShadowsScript : MonoBehaviour
     private GameObject animal1Shadow;
     private GameObject animal2Shadow;
     private GameObject animal3Shadow;
-
+     
     private string[] animals = { "bear.fw", "boar.fw", "deer.fw", "fox.fw", "hedgehog.fw", "owl.fw", "squirrel.fw" };
-    private float[] animalSizes = { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f };
+    private float[] animalSizes = { 0.2056717f, 0.35f, 0.68f, 0.1554485f, 0.53f, 0.3f, 0.2567876f };
     private int totalAnimals = 7;
 
     private SpriteRenderer spriteRenderer;
-    private string path = "";
+    private string path = ""; 
 
     private int[] correctPositions = { 0, 1, 2 }; // animalul din stanga de pe pozitia i va match-ui umbra din dreapta de pe pozitia correctPositions[i]
     private GameObject[] correctShadows = new GameObject[3];
-
-
+    private GameObject[] correctAnimals = new GameObject[3];
 
     private void shuffle<T>(System.Random rng, T[] array)
     {
@@ -30,6 +31,7 @@ public class generateAnimalShadowsScript : MonoBehaviour
         while (n > 1)
         {
             int k = rng.Next(n--);
+            
             T temp = array[n];
             GameObject temp1 = correctShadows[n];
 
@@ -40,6 +42,7 @@ public class generateAnimalShadowsScript : MonoBehaviour
             correctShadows[k] = temp1;
         }
     }
+
     private void shuffleAnimalShadows()
     {
         var rng = new System.Random();
@@ -57,9 +60,9 @@ public class generateAnimalShadowsScript : MonoBehaviour
         // right side shadows are resized according animalSizes[correctPositions[0,1,2]] (MAYBE I AM WRONG...)
 
         shuffleAnimalShadows();
-        Debug.Log(correctPositions[0]);
-        Debug.Log(correctPositions[1]);
-        Debug.Log(correctPositions[2]);
+        Debug.Log("c:" + correctPositions[0]);
+        Debug.Log("c:" + correctPositions[1]);
+        Debug.Log("c:" + correctPositions[2]);
 
 
         System.Random rnd = new System.Random();
@@ -68,9 +71,15 @@ public class generateAnimalShadowsScript : MonoBehaviour
         int randint2 = rnd.Next(0, totalAnimals);
         int randint3 = rnd.Next(0, totalAnimals);
 
-        Debug.Log(randint1);
-        Debug.Log(randint2);
-        Debug.Log(randint3);
+        while (randint2 == randint1 || randint2 == randint3)
+            randint2 = rnd.Next(0, totalAnimals);
+
+        while (randint3 == randint1 || randint3 == randint2)
+            randint3 = rnd.Next(0, totalAnimals);
+
+        Debug.Log("p:" + randint1);
+        Debug.Log("p:" + randint2);
+        Debug.Log("p:" + randint3);
 
         string animalName1 = animals[randint1];
         string animalName2 = animals[randint2];
@@ -113,6 +122,40 @@ public class generateAnimalShadowsScript : MonoBehaviour
         correctShadows[correctPositions[0]].transform.localScale = new Vector3(animalSize1, animalSize1, animalSize1); // TODO: i think i messed up..
         correctShadows[correctPositions[1]].transform.localScale = new Vector3(animalSize2, animalSize2, animalSize2);
         correctShadows[correctPositions[2]].transform.localScale = new Vector3(animalSize3, animalSize3, animalSize3);
+        var size1 = animal1.GetComponent<Renderer>().bounds.size;
+        var size2 = animal2.GetComponent<Renderer>().bounds.size;
+        var size3 = animal3.GetComponent<Renderer>().bounds.size;
+        var center1 = animal1.GetComponent<Renderer>().bounds.center;
+        var center2 = animal2.GetComponent<Renderer>().bounds.center;
+        var center3 = animal3.GetComponent<Renderer>().bounds.center;
+
+        //BoxCollider2D boxCollider2D1 = animal1.AddComponent<BoxCollider2D>();
+        //boxCollider2D1.size = size1 / animalSize1;
+        //boxCollider2D1.offset = center1;
+
+        //BoxCollider2D boxCollider2D2 = animal1.AddComponent<BoxCollider2D>();
+        //boxCollider2D2.size = size2 / animalSize2;
+        //boxCollider2D2.offset = center2;
+
+        //BoxCollider2D boxCollider2D3 = animal1.AddComponent<BoxCollider2D>();
+        //boxCollider2D3.size = size3 / animalSize3;
+        //boxCollider2D3.offset = center3;
+
+        //BoxCollider2D boxColldier2D11 = correctShadows[correctPositions[0]].AddComponent<BoxCollider2D>();
+        //boxCollider2D11.size = size;
+        //boxCollider2D11.center = center;
+
+        //BoxCollider2D boxColldier2D22 = correctShadows[correctPositions[1]].AddComponent<BoxCollider2D>();
+        //boxCollider2D22.size = size;
+        //boxCollider2D22.center = center;
+
+        //BoxCollider2D boxColldier2D33 = correctShadows[correctPositions[2]].AddComponent<BoxCollider2D>();
+        //boxCollider2D33.size = size;
+        //boxCollider2D33.center = center;
+
+        correctAnimals[0] = animal1;
+        correctAnimals[1] = animal2;
+        correctAnimals[2] = animal3;
     }
 
 
@@ -140,6 +183,35 @@ public class generateAnimalShadowsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        checkMatch();
     }
+
+    void checkMatch()
+    {
+        var firstSelected = matchesScript.firstSelected;
+        var lastSelected = matchesScript.lastSelected;
+        if (firstSelected != -1 && lastSelected != -1)
+        {
+            //Debug.Log(correctPositions[0]);
+            //Debug.Log(correctPositions[1]);
+            //Debug.Log(correctPositions[2]);
+            Debug.Log(firstSelected);
+            Debug.Log(lastSelected);
+            //Debug.Log(correctPositions[firstSelected]); 
+            //Debug.Log((lastSelected - 3)); 
+            Debug.Log(correctAnimals[firstSelected].name);
+            Debug.Log(correctShadows[lastSelected - 3].name);
+            if (correctShadows[lastSelected - 3].name.Contains(correctAnimals[firstSelected].name))
+            {
+                Debug.Log("Bravo");
+            }
+            else
+            {
+                Debug.Log("Ai gresit");
+            }
+            matchesScript.firstSelected = -1;
+            matchesScript.lastSelected = -1;
+        }
+    }
+
 }
