@@ -28,18 +28,15 @@ public class genereazaGhicitoareScript : MonoBehaviour
     private GameObject speaker;
 
     private Ghicitoare[] ghicitori = {
-        new Ghicitoare(0, "bear.fw", 0.2256717f, "wednesday"),
-        //new Ghicitoare(1, "boar.fw", 0.5291776f, "wednesday"),
-        //new Ghicitoare(2, "deer.fw", 0.7277227f, "wednesday"),
-        new Ghicitoare(3, "fox.fw", 0.2454485f, "wednesday"),
-        new Ghicitoare(4, "hedgehog.fw", 1f, "wednesday"),
-        //new Ghicitoare(5, "owl.fw", 0.4649033f, "wednesday"),
-        new Ghicitoare(6, "squirrel.fw", 0.3867876f, "wednesday")
+        new Ghicitoare(0, "bearMini.fw", 1f, "wednesday"),
+        new Ghicitoare(1, "foxMini.fw", 1f, "wednesday"),
+        new Ghicitoare(2, "hedgehogMini.fw", 1f, "wednesday"),
+        new Ghicitoare(3, "squirrelMini.fw",1f, "wednesday")
     };
 
 
-    private List<string> animals = new List<string>(new string[] { "bear.fw", "fox.fw", "hedgehog.fw", "squirrel.fw" });
-    private List<float> animalSizes = new List<float>(new float[] { 0.2256717f, 0.2454485f, 0.6f, 0.3867876f });
+    private List<string> animals = new List<string>(new string[] { "bearMini.fw", "foxMini.fw", "hedgehogMini.fw", "squirrelMini.fw" });
+    private List<float> animalSizes = new List<float>(new float[] { 1f, 1f, 1f, 1f });
     private int totalAnimals = 4;
 
     private static int correctNumber;
