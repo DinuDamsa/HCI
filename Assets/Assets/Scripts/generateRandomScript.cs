@@ -15,9 +15,11 @@ public class generateRandomScript : MonoBehaviour
     private GameObject threeFW;
 
 
-    private string[] animals = { "bear.fw", "boar.fw", "deer.fw", "fox.fw", "hedgehog.fw", "owl.fw", "squirrel.fw" };
-    private float[] animalSizes = { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f };
-    private int totalAnimals = 7;
+    //private string[] animals = { "bear.fw", "boar.fw", "deer.fw", "fox.fw", "hedgehog.fw", "owl.fw", "squirrel.fw" };
+    private string[] animals = { "bear.fw", "fox.fw", "hedgehog.fw", "squirrel.fw" };
+    //private float[] animalSizes = { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f };
+    private float[] animalSizes = { 0.2256717f, 0.2454485f, 1f, 0.3867876f };
+    private int totalAnimals = 4;
     //private GameplayManager gameplayManager = GameObject.FindObjectOfType<GameplayManager>();
     // https://www.youtube.com/watch?v=ck6OyNBC95c
     public static int correctNumber;

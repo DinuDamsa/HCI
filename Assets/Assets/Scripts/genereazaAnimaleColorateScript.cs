@@ -8,9 +8,9 @@ public class genereazaAnimaleColorateScript : MonoBehaviour
     private GameObject animal2;
     private GameObject animal3;
 
-    private string[] animals = { "bear.fw", "boar.fw", "deer.fw", "fox.fw", "hedgehog.fw", "owl.fw", "squirrel.fw" };
-    private float[] animalSizes = { 0.2256717f, 0.5291776f, 0.7277227f, 0.2454485f, 1f, 0.4649033f, 0.3867876f };
-    private int totalAnimals = 7;
+    private string[] animals = { "bear.fw", "fox.fw", "hedgehog.fw",  "squirrel.fw" };
+    private float[] animalSizes = { 0.2256717f, 0.2454485f, 0.7f, 0.3867876f };
+    private int totalAnimals = 4;
 
     public static int correctNumber; // TODO: asta e animalul corect colorat de pe ecran
 
