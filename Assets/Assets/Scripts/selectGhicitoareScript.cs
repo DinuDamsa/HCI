@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class selectGhicitoareScript : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class selectGhicitoareScript : MonoBehaviour
             audioSource.Play();
             otherAnimal1.SetActive(false);
             otherAnimal2.SetActive(false);
+            StartCoroutine(Waiter());
         }
         else
         {
@@ -34,6 +36,13 @@ public class selectGhicitoareScript : MonoBehaviour
             audioSource.Play();
         }
     }
+
+    IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 
     // Start is called before the first frame update
     void Start()

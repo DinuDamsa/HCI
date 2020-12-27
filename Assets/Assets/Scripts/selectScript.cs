@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class selectScript : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class selectScript : MonoBehaviour
             audioSource.Play();
             otherNumber1.SetActive(false);
             otherNumber2.SetActive(false);
+            StartCoroutine(Waiter());
             //audioSource.PlayOneShot(rightClip, 1f);
         }
         else
@@ -34,6 +36,12 @@ public class selectScript : MonoBehaviour
             audioSource.Play();
             //audioSource.PlayOneShot(wrongClip, 1f);
         }
+    }
+
+    IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Start is called before the first frame update
