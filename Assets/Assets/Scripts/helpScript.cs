@@ -8,6 +8,7 @@ public class helpScript : MonoBehaviour
     GameObject pointerFW;
     GameObject pointerFW1;
     GameObject pointerLeftFW;
+    GameObject bear;
 
     private AudioSource sound1;
     private AudioSource sound2;
@@ -26,6 +27,13 @@ public class helpScript : MonoBehaviour
 
     public void OnMouseUp()
     {
+        // disable bear.fw
+        bear.GetComponent<Collider2D>().enabled = false;
+        bear.GetComponent<AudioSource>().Stop();
+
+        pointerFW1.SetActive(false);
+        pointerLeftFW.SetActive(false);
+
         firstPlaying = true;
         pointerFW.SetActive(true);
 
@@ -39,6 +47,8 @@ public class helpScript : MonoBehaviour
         pointerFW = GameObject.Find("pointer.fw");
         pointerFW1 = GameObject.Find("pointer.fw (1)");
         pointerLeftFW = GameObject.Find("pointerLeft.fw");
+
+        bear = GameObject.Find("bear.fw");
 
         sound1 = GameObject.Find("pointer.fw").GetComponent<AudioSource>();
         sound2 = GameObject.Find("pointer.fw (1)").GetComponent<AudioSource>();
@@ -95,6 +105,9 @@ public class helpScript : MonoBehaviour
         else if (thirdPlaying && trackLength <= 0)
         {
             pointerLeftFW.SetActive(false);
+            
+            // enable bear.fw
+            bear.GetComponent<Collider2D>().enabled = true;
         }
 
         trackLength -= Time.deltaTime;
