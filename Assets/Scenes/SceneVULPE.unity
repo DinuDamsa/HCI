@@ -481,12 +481,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imagesGood:
   - {fileID: 21300000, guid: 2005984ac31f90d48a5c1cc061df507b, type: 3}
-  - {fileID: 21300000, guid: f895ae54d2628384ead14611d750d220, type: 3}
+  - {fileID: 21300000, guid: e20d78d7c617c494ca8d7e28588e3123, type: 3}
   - {fileID: 21300000, guid: 5dc962d928bea184eba8f2df889ed41c, type: 3}
+  - {fileID: 21300000, guid: 7b908b695a49b1647bd124cf49ce402d, type: 3}
+  - {fileID: 21300000, guid: a3669699d1551934fa33a7c209d5266b, type: 3}
   imagesBad:
   - {fileID: 21300000, guid: 081b830cfeec2fd469c0868f28ec4b00, type: 3}
-  - {fileID: 21300000, guid: a5055d55d603ac64984213978e24672c, type: 3}
+  - {fileID: 21300000, guid: 34ce814d58a74d044a5826959626bfae, type: 3}
   - {fileID: 21300000, guid: b6d04d1a9ddf4ad48b31398ffd8b6ff0, type: 3}
+  - {fileID: 21300000, guid: 0482e2140834a5047ad7a17985e4babd, type: 3}
+  - {fileID: 21300000, guid: 95ff5e8d51a07b745a6c7410e33e872c, type: 3}
   spriteRendererID: 1
   isGoodImage: 0
   audioSourceGameObject: {fileID: 1661844867}
@@ -713,12 +717,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imagesGood:
   - {fileID: 21300000, guid: 2005984ac31f90d48a5c1cc061df507b, type: 3}
-  - {fileID: 21300000, guid: f895ae54d2628384ead14611d750d220, type: 3}
+  - {fileID: 21300000, guid: e20d78d7c617c494ca8d7e28588e3123, type: 3}
   - {fileID: 21300000, guid: 5dc962d928bea184eba8f2df889ed41c, type: 3}
+  - {fileID: 21300000, guid: 7b908b695a49b1647bd124cf49ce402d, type: 3}
+  - {fileID: 21300000, guid: a3669699d1551934fa33a7c209d5266b, type: 3}
   imagesBad:
   - {fileID: 21300000, guid: 081b830cfeec2fd469c0868f28ec4b00, type: 3}
-  - {fileID: 21300000, guid: a5055d55d603ac64984213978e24672c, type: 3}
+  - {fileID: 21300000, guid: 34ce814d58a74d044a5826959626bfae, type: 3}
   - {fileID: 21300000, guid: b6d04d1a9ddf4ad48b31398ffd8b6ff0, type: 3}
+  - {fileID: 21300000, guid: 0482e2140834a5047ad7a17985e4babd, type: 3}
+  - {fileID: 21300000, guid: 95ff5e8d51a07b745a6c7410e33e872c, type: 3}
   spriteRendererID: 2
   isGoodImage: 0
   audioSourceGameObject: {fileID: 2004043309}
