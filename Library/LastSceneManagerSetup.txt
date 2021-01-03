@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SceneVULPE.unity
+- path: Assets/Scenes/Scene9.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

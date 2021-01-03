@@ -218,8 +218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedValue: 3
   audioSourceGameObject: {fileID: 1156343976}
-  rightClip: {fileID: 8300000, guid: e832e37f175153b4798d073b2b59ad6b, type: 3}
-  wrongClip: {fileID: 8300000, guid: 5b232d7c99ec24643a39fc68eac6dea2, type: 3}
+  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
+  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
   otherNumber1: {fileID: 945570625}
   otherNumber2: {fileID: 1740715046}
 --- !u!61 &251644903
@@ -712,8 +712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedValue: 1
   audioSourceGameObject: {fileID: 1156343976}
-  rightClip: {fileID: 8300000, guid: e832e37f175153b4798d073b2b59ad6b, type: 3}
-  wrongClip: {fileID: 8300000, guid: 5b232d7c99ec24643a39fc68eac6dea2, type: 3}
+  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
+  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
   otherNumber1: {fileID: 251644899}
   otherNumber2: {fileID: 1740715046}
 --- !u!61 &945570629
@@ -847,7 +847,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 042b645920caddd44af5326f8a205546, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1030,8 +1030,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedValue: 2
   audioSourceGameObject: {fileID: 1156343976}
-  rightClip: {fileID: 8300000, guid: e832e37f175153b4798d073b2b59ad6b, type: 3}
-  wrongClip: {fileID: 8300000, guid: 5b232d7c99ec24643a39fc68eac6dea2, type: 3}
+  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
+  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
   otherNumber1: {fileID: 945570625}
   otherNumber2: {fileID: 251644899}
 --- !u!61 &1740715050

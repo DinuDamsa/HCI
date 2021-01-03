@@ -327,8 +327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedValue: 3
   audioSourceGameObject: {fileID: 1204679248}
-  rightClip: {fileID: 8300000, guid: e832e37f175153b4798d073b2b59ad6b, type: 3}
-  wrongClip: {fileID: 8300000, guid: 5b232d7c99ec24643a39fc68eac6dea2, type: 3}
+  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
+  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
   otherAnimal1: {fileID: 1650423588}
   otherAnimal2: {fileID: 1920886423}
 --- !u!1 &796539976
@@ -342,6 +342,8 @@ GameObject:
   - component: {fileID: 796539978}
   - component: {fileID: 796539977}
   - component: {fileID: 796539979}
+  - component: {fileID: 796539981}
+  - component: {fileID: 796539980}
   m_Layer: 0
   m_Name: speaker
   m_TagString: Untagged
@@ -509,6 +511,44 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &796539980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796539976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ef7bb2d90d9bd48b372e3f622ad61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &796539981
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796539976}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.45, y: 7.38}
+    newSize: {x: 9.45, y: 7.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.45, y: 7.38}
+  m_EdgeRadius: 0
 --- !u!1 &914075206
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +775,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 747e34fa60add9e409dd53fb6ce4a24b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1066,8 +1106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedValue: 1
   audioSourceGameObject: {fileID: 1204679248}
-  rightClip: {fileID: 8300000, guid: e832e37f175153b4798d073b2b59ad6b, type: 3}
-  wrongClip: {fileID: 8300000, guid: 5b232d7c99ec24643a39fc68eac6dea2, type: 3}
+  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
+  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
   otherAnimal1: {fileID: 1920886423}
   otherAnimal2: {fileID: 537946730}
 --- !u!1 &1920886423
@@ -1193,7 +1233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedValue: 2
   audioSourceGameObject: {fileID: 1204679248}
-  rightClip: {fileID: 8300000, guid: e832e37f175153b4798d073b2b59ad6b, type: 3}
-  wrongClip: {fileID: 8300000, guid: 5b232d7c99ec24643a39fc68eac6dea2, type: 3}
+  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
+  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
   otherAnimal1: {fileID: 1650423588}
   otherAnimal2: {fileID: 537946730}

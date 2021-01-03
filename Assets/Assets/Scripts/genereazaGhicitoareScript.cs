@@ -88,7 +88,7 @@ public class genereazaGhicitoareScript : MonoBehaviour
         AudioSource audio = speaker.GetComponent<AudioSource>(); //Assets / Resources / wednesday.mp3
         audio.clip = Resources.Load<AudioClip>(ghicitoare.soundPath);
         Debug.Log(ghicitoare.soundPath);
-        audio.Play();
+        // TODO: nu mai trebuie asta acum - audio.Play();
 
         correctNumber = ghicitoare.correctAnimal;
 

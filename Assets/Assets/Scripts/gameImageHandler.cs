@@ -43,14 +43,14 @@ public class gameImageHandler : MonoBehaviour
         if(isGoodImage)
         {
             Debug.Log("CORECT");
-            audioSource.clip = Resources.Load<AudioClip>("wednesday"); ;
+            audioSource.clip = Resources.Load<AudioClip>("felicitari"); ;
             audioSource.Play();
             StartCoroutine(Waiter());
         }
         else
         {
             Debug.Log("INCORECT");
-            audioSource.clip = Resources.Load<AudioClip>("wednesday");
+            audioSource.clip = Resources.Load<AudioClip>("IncearcaDinNou");
             audioSource.Play();
         }
     }
