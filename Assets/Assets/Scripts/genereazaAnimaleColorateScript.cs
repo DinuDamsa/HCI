@@ -38,10 +38,21 @@ public class genereazaAnimaleColorateScript : MonoBehaviour
         int randint = generateRandInt(0, totalAnimals);
 
         // TODO: CULORITE TREBUIE NEAPARAT SA FIE EVIDENTA (exista sansa sa fie 255,255,255 - alb => nicio diferenta intre real si fake...)
-        Color colorFake1 = new Color(Random.Range(0F, 1F), Random.Range(0, 1F), Random.Range(0, 1F));
-        Color colorFake2 = new Color(Random.Range(0F, 1F), Random.Range(0, 1F), Random.Range(0, 1F));
 
-        string animalName = animals[randint];
+        Color[] fakeColors = {
+        new Color(1, 0, 0),
+        new Color(0, 1, 0),
+        new Color(0, 0, 1),
+        new Color(1, 0, 1),
+        new Color(0, 1, 1)
+        };
+
+        int randIndex = generateRandInt(0, 5);
+        Color colorFake1 = fakeColors[randIndex];
+        int randIndex2 = generateRandInt(0, 100) % 5;
+        Color colorFake2 = fakeColors[randIndex2];
+
+    string animalName = animals[randint];
         string pathToNewSprite = path + animalName;
         Sprite newSprite = Resources.Load<Sprite>(pathToNewSprite);
 
