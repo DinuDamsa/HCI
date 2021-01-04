@@ -457,9 +457,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1661844870}
   - component: {fileID: 1661844869}
-  - component: {fileID: 1661844868}
   - component: {fileID: 1661844871}
   - component: {fileID: 1661844872}
+  - component: {fileID: 1661844873}
   m_Layer: 0
   m_Name: spriteRendererA
   m_TagString: Untagged
@@ -467,36 +467,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1661844868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661844867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2d48f838bae7445ae996707f069dbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imagesGood:
-  - {fileID: 21300000, guid: 2005984ac31f90d48a5c1cc061df507b, type: 3}
-  - {fileID: 21300000, guid: e20d78d7c617c494ca8d7e28588e3123, type: 3}
-  - {fileID: 21300000, guid: 5dc962d928bea184eba8f2df889ed41c, type: 3}
-  - {fileID: 21300000, guid: 7b908b695a49b1647bd124cf49ce402d, type: 3}
-  - {fileID: 21300000, guid: a3669699d1551934fa33a7c209d5266b, type: 3}
-  imagesBad:
-  - {fileID: 21300000, guid: 081b830cfeec2fd469c0868f28ec4b00, type: 3}
-  - {fileID: 21300000, guid: 34ce814d58a74d044a5826959626bfae, type: 3}
-  - {fileID: 21300000, guid: b6d04d1a9ddf4ad48b31398ffd8b6ff0, type: 3}
-  - {fileID: 21300000, guid: 0482e2140834a5047ad7a17985e4babd, type: 3}
-  - {fileID: 21300000, guid: 95ff5e8d51a07b745a6c7410e33e872c, type: 3}
-  spriteRendererID: 1
-  isGoodImage: 0
-  audioSourceGameObject: {fileID: 1661844867}
-  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
-  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
-  scenename: SceneVULPE
 --- !u!212 &1661844869
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -683,6 +653,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1661844873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661844867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253892f2dc1424c41aa0fe06681d4e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedValue: 0
+  audioSourceGameObject: {fileID: 2072195943}
+  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
+  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
+  otherNumber1: {fileID: 2004043309}
 --- !u!1 &2004043309
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,9 +680,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2004043312}
   - component: {fileID: 2004043311}
-  - component: {fileID: 2004043310}
   - component: {fileID: 2004043313}
   - component: {fileID: 2004043314}
+  - component: {fileID: 2004043315}
   m_Layer: 0
   m_Name: spriteRendererB
   m_TagString: Untagged
@@ -703,36 +690,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2004043310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004043309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e2d48f838bae7445ae996707f069dbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imagesGood:
-  - {fileID: 21300000, guid: 2005984ac31f90d48a5c1cc061df507b, type: 3}
-  - {fileID: 21300000, guid: e20d78d7c617c494ca8d7e28588e3123, type: 3}
-  - {fileID: 21300000, guid: 5dc962d928bea184eba8f2df889ed41c, type: 3}
-  - {fileID: 21300000, guid: 7b908b695a49b1647bd124cf49ce402d, type: 3}
-  - {fileID: 21300000, guid: a3669699d1551934fa33a7c209d5266b, type: 3}
-  imagesBad:
-  - {fileID: 21300000, guid: 081b830cfeec2fd469c0868f28ec4b00, type: 3}
-  - {fileID: 21300000, guid: 34ce814d58a74d044a5826959626bfae, type: 3}
-  - {fileID: 21300000, guid: b6d04d1a9ddf4ad48b31398ffd8b6ff0, type: 3}
-  - {fileID: 21300000, guid: 0482e2140834a5047ad7a17985e4babd, type: 3}
-  - {fileID: 21300000, guid: 95ff5e8d51a07b745a6c7410e33e872c, type: 3}
-  spriteRendererID: 2
-  isGoodImage: 0
-  audioSourceGameObject: {fileID: 2004043309}
-  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
-  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
-  scenename: SceneVULPE
 --- !u!212 &2004043311
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -919,6 +876,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2004043315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004043309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253892f2dc1424c41aa0fe06681d4e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedValue: 1
+  audioSourceGameObject: {fileID: 2072195943}
+  rightClip: {fileID: 8300000, guid: 9e50d32385decff408f132511ca7b587, type: 3}
+  wrongClip: {fileID: 8300000, guid: 4f2c62ae776852041999db91cda89d97, type: 3}
+  otherNumber1: {fileID: 1661844867}
 --- !u!1 &2072195943
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +904,7 @@ GameObject:
   - component: {fileID: 2072195945}
   - component: {fileID: 2072195944}
   - component: {fileID: 2072195946}
+  - component: {fileID: 2072195947}
   m_Layer: 0
   m_Name: gameBkg.fw
   m_TagString: Untagged
@@ -1097,3 +1072,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2072195947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072195943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2d48f838bae7445ae996707f069dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenename: SceneVulpe
+  imagesGood:
+  - {fileID: 21300000, guid: 2005984ac31f90d48a5c1cc061df507b, type: 3}
+  - {fileID: 21300000, guid: 5dc962d928bea184eba8f2df889ed41c, type: 3}
+  - {fileID: 21300000, guid: 7b908b695a49b1647bd124cf49ce402d, type: 3}
+  - {fileID: 21300000, guid: a3669699d1551934fa33a7c209d5266b, type: 3}
+  - {fileID: 21300000, guid: e20d78d7c617c494ca8d7e28588e3123, type: 3}
+  imagesBad:
+  - {fileID: 21300000, guid: b6d04d1a9ddf4ad48b31398ffd8b6ff0, type: 3}
+  - {fileID: 21300000, guid: 081b830cfeec2fd469c0868f28ec4b00, type: 3}
+  - {fileID: 21300000, guid: 0482e2140834a5047ad7a17985e4babd, type: 3}
+  - {fileID: 21300000, guid: 95ff5e8d51a07b745a6c7410e33e872c, type: 3}
+  - {fileID: 21300000, guid: 34ce814d58a74d044a5826959626bfae, type: 3}

@@ -8,18 +8,28 @@ public class gameImageHandler : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    AudioSource audioSource;
+    public string scenename;
     public Sprite[] imagesGood;
     public Sprite[] imagesBad;
-    public int spriteRendererID;
-    public bool isGoodImage;
-    private AudioSource audioSource;
-    public GameObject audioSourceGameObject;
-    public AudioClip rightClip;
-    public AudioClip wrongClip;
-    public string scenename;
+    static int correctNumber;
+
+    GameObject spriteRendererA;
+    GameObject spriteRendererB;
+
+
+    public static bool checkAnswer(int answer)
+    {
+        return answer == correctNumber;
+    }
+
 
     void Start()
     {
+        spriteRendererA = GameObject.Find("spriteRendererA");
+        spriteRendererB = GameObject.Find("spriteRendererB");
+
+
         UpdateImage();
         
 
@@ -37,24 +47,6 @@ public class gameImageHandler : MonoBehaviour
         SceneManager.LoadScene(scenename);
     }
 
-    public void OnMouseUp()
-    {
-        Debug.Log(audioSource);
-        if(isGoodImage)
-        {
-            Debug.Log("CORECT");
-            audioSource.clip = Resources.Load<AudioClip>("felicitari"); ;
-            audioSource.Play();
-            StartCoroutine(Waiter());
-        }
-        else
-        {
-            Debug.Log("INCORECT");
-            audioSource.clip = Resources.Load<AudioClip>("IncearcaDinNou");
-            audioSource.Play();
-        }
-    }
-
     public void UpdateImage()
     {
         System.Random rnd = new System.Random();
@@ -62,35 +54,17 @@ public class gameImageHandler : MonoBehaviour
         int num2 = rnd.Next(2);
         Debug.Log(num);
         Debug.Log(num2);
-        if(num2 % 2 == 0)
+        if (num2 % 2 == 0)
         {
-            if(spriteRendererID == 1)
-            {
-                GetComponent<SpriteRenderer>().sprite = imagesGood[num];
-                isGoodImage = true;
-            }
-                
-            else
-            {
-                GetComponent<SpriteRenderer>().sprite = imagesBad[num];
-                isGoodImage = false;
-            }
-                
+            spriteRendererA.GetComponent<SpriteRenderer>().sprite = imagesGood[num];
+            correctNumber = 0;
+            spriteRendererB.GetComponent<SpriteRenderer>().sprite = imagesBad[num];
         }
         else
         {
-            if (spriteRendererID == 2)
-            {
-                GetComponent<SpriteRenderer>().sprite = imagesGood[num];
-                isGoodImage = true;
-            }
-                
-            else
-            {
-                GetComponent<SpriteRenderer>().sprite = imagesBad[num];
-                isGoodImage = false;
-            }
-                
+            spriteRendererB.GetComponent<SpriteRenderer>().sprite = imagesGood[num];
+            correctNumber = 1;
+            spriteRendererA.GetComponent<SpriteRenderer>().sprite = imagesBad[num];
         }
     }
 

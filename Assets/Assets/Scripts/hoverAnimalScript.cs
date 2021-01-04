@@ -10,6 +10,7 @@ public class hoverAnimalScript : MonoBehaviour
     {
         Debug.Log("MOUSE OVER");
         sound.Play();
+        GameObject.Find("bkg").GetComponent<AudioSource>().Stop();
     }
 
     public void OnMouseExit()

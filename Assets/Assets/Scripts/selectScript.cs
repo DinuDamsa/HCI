@@ -24,7 +24,11 @@ public class selectScript : MonoBehaviour
             audioSource.clip = rightClip;
             audioSource.Play();
             otherNumber1.SetActive(false);
-            otherNumber2.SetActive(false);
+            try
+            {
+                otherNumber2.SetActive(false);
+            }
+            finally { }
             StartCoroutine(Waiter());
             //audioSource.PlayOneShot(rightClip, 1f);
         }

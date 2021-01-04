@@ -28,10 +28,10 @@ public class genereazaGhicitoareScript : MonoBehaviour
     private GameObject speaker;
 
     private Ghicitoare[] ghicitori = {
-        new Ghicitoare(0, "bearMini.fw", 1f, "wednesday"),
-        new Ghicitoare(1, "foxMini.fw", 1f, "wednesday"),
-        new Ghicitoare(2, "hedgehogMini.fw", 1f, "wednesday"),
-        new Ghicitoare(3, "squirrelMini.fw",1f, "wednesday")
+        new Ghicitoare(0, "bearMini.fw", 1f, "GhicitoareUrs"),
+        new Ghicitoare(1, "foxMini.fw", 1f, "GhicitoareVulpe"),
+        new Ghicitoare(2, "hedgehogMini.fw", 1f, "GhicitoareArici"),
+        new Ghicitoare(3, "squirrelMini.fw",1f, "GhicitoareVeverita")
     };
 
 
